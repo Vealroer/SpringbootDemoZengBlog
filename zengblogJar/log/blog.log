@@ -1268,3 +1268,57 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2021-07-02 15:48:47.361  INFO 6908 --- [http-nio-80-exec-3] cn.sinap.zengblog.aspect.LogAspect       : result : about
 2021-07-02 15:48:48.868  INFO 6908 --- [http-nio-80-exec-9] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/game', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.toGame', args=[]} 
 2021-07-02 15:48:48.868  INFO 6908 --- [http-nio-80-exec-9] cn.sinap.zengblog.aspect.LogAspect       : result : game
+2021-07-02 18:32:19.388  INFO 1532 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 1532 (E:\JavaItemGitHub\zengblogJar\target\classes started by Vealroer in E:\JavaItemGitHub\zengblogJar)
+2021-07-02 18:32:19.390 DEBUG 1532 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2021-07-02 18:32:19.391  INFO 1532 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2021-07-02 18:32:19.437  INFO 1532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-02 18:32:19.438  INFO 1532 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-02 18:32:21.048  INFO 1532 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-07-02 18:32:21.060  INFO 1532 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-02 18:32:21.060  INFO 1532 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-07-02 18:32:21.148  INFO 1532 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-02 18:32:21.149  INFO 1532 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1711 ms
+2021-07-02 18:32:21.243  WARN 1532 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'archivesShowController': Unsatisfied dependency expressed through field 'blogService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogServiceImpl': Unsatisfied dependency expressed through field 'blogDao'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'blogDao' defined in file [E:\JavaItemGitHub\zengblogJar\target\classes\cn\sinap\zengblog\dao\BlogDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties': Could not bind properties to 'MybatisProperties' : prefix=mybatis, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'mybatis.mapper-locations' to java.lang.String[]
+2021-07-02 18:32:21.245  INFO 1532 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-07-02 18:32:21.259  INFO 1532 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-07-02 18:32:21.264 ERROR 1532 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target [Bindable@162b0b29 type = java.lang.String[], value = 'provided', annotations = array<Annotation>[[empty]]] failed:
+
+    Property: mybatis.mapper-locations[0].classpath
+    Value: mapper/*.xml
+    Origin: class path resource [application.yml]:19:19
+    Reason: The elements [mybatis.mapper-locations[0].classpath] were left unbound.
+
+Action:
+
+Update your application's configuration
+
+2021-07-02 18:32:40.065  INFO 22604 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 22604 (E:\JavaItemGitHub\zengblogJar\target\classes started by Vealroer in E:\JavaItemGitHub\zengblogJar)
+2021-07-02 18:32:40.068 DEBUG 22604 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2021-07-02 18:32:40.069  INFO 22604 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2021-07-02 18:32:40.108  INFO 22604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-02 18:32:40.109  INFO 22604 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-02 18:32:41.323  INFO 22604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2021-07-02 18:32:41.330  INFO 22604 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-02 18:32:41.331  INFO 22604 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-07-02 18:32:41.401  INFO 22604 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-02 18:32:41.401  INFO 22604 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
+2021-07-02 18:32:42.050  INFO 22604 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-07-02 18:32:42.166  INFO 22604 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-07-02 18:32:42.216  INFO 22604 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-02 18:32:42.245  INFO 22604 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-07-02 18:32:42.606  INFO 22604 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2021-07-02 18:32:42.607  INFO 22604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-07-02 18:32:42.614  INFO 22604 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-07-02 18:32:42.641  INFO 22604 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-07-02 18:32:42.717  INFO 22604 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2021-07-02 18:32:42.734  INFO 22604 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 2.989 seconds (JVM running for 3.572)

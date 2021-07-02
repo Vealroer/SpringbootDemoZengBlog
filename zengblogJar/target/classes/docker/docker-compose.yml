@@ -3,21 +3,24 @@ version: '3.0'  #compose版本号
 services:  #填写需要的服务
   mysql:
     ports:
-    - "33306:3306"
+      - "33306:3306"
     image: centos/mysql-57-centos7
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       TZ: Asia/Shanghai
+      MYSQL_DATABASE: blog
+      MYSQL_USER: zengchao
+      MYSQL_PASSWORD: 123456
     container_name: mysql5.7
     networks:
       - zengchaoweb
 
-#项目连接局域网下的mysql服务器ip不要写死
-#url: jdbc:mysql://mysql:33306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+  #项目连接局域网下的mysql服务器ip不要写死
+  #url: jdbc:mysql://mysql:33306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
   springbootdemo:
     build: ./
     ports:
-    - "80:80"
+      - "80:80"
     image: springbootdemoblog
     container_name: zengblog  #容器名称
     environment:
