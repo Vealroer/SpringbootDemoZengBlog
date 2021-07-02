@@ -1,0 +1,817 @@
+2020-09-02 19:37:06.540  INFO 29212 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 29212 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 19:37:06.555 DEBUG 29212 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 19:37:06.556  INFO 29212 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 19:37:06.592  INFO 29212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 19:37:06.593  INFO 29212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 19:37:07.920  INFO 29212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 19:37:07.928  INFO 29212 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 19:37:07.928  INFO 29212 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 19:37:07.994  INFO 29212 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 19:37:07.995  INFO 29212 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1402 ms
+2020-09-02 19:37:08.987  INFO 29212 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 19:37:09.122  INFO 29212 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 19:37:09.181  INFO 29212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 19:37:09.208  INFO 29212 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 19:37:09.602  INFO 29212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 19:37:09.604  INFO 29212 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 19:37:09.614  INFO 29212 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 19:37:09.648  INFO 29212 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 19:37:09.796  INFO 29212 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 19:37:10.093  INFO 29212 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 4.048 seconds (JVM running for 6.254)
+2020-09-02 19:37:25.301  INFO 29212 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; monitor_count=843] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 19:37:25.308  INFO 29212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 19:37:25.308  INFO 29212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 19:37:25.318  INFO 29212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-09-02 19:37:34.653  INFO 29212 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 19:37:34.861  INFO 29212 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 19:37:34.866 DEBUG 29212 --- [http-nio-8080-exec-8] c.s.z.d.U.findUserByUsernameAndPassword  : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-09-02 19:37:34.881 DEBUG 29212 --- [http-nio-8080-exec-8] c.s.z.d.U.findUserByUsernameAndPassword  : ==> Parameters: zengchao(String), 202cb962ac59075b964b07152d234b70(String)
+2020-09-02 19:37:34.893 DEBUG 29212 --- [http-nio-8080-exec-8] c.s.z.d.U.findUserByUsernameAndPassword  : <==      Total: 1
+2020-09-02 19:37:36.430 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:37:36.430 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:37:36.432 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:37:36.433 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:37:36.433 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:37:36.437 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 7
+2020-09-02 19:37:36.446 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:37:36.446 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:37:36.488 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:37:36.490 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:37:36.490 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:37:36.491 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:37:43.707 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==>  Preparing: select b.id, b.published, b.flag, b.title, b.content, b.type_id, b.tag_ids, b.first_picture, b.description, b.recommend, b.share_statement, b.appreciation, b.commentabled, t.id typeid, t.name typename ,tag.id tagid , tag.name tagname from t_blog b ,t_type t , t_tag tag , t_blog_tags tb where b.type_id = t.id AND tb.blog_id = b.id AND tb.tag_id = tag.id and b.id = ?;
+2020-09-02 19:37:43.708 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==> Parameters: 18(Long)
+2020-09-02 19:37:43.716 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : <==      Total: 5
+2020-09-02 19:37:43.718 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:37:43.718 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:37:43.720 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:37:43.721 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:37:43.722 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:37:43.724 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:37:48.933 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:37:48.933 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 3(Long)
+2020-09-02 19:37:48.990 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:37:48.991 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:37:48.992 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 7(Long)
+2020-09-02 19:37:48.992 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:37:48.993 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:37:48.993 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 8(Long)
+2020-09-02 19:37:48.994 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:37:48.994 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:37:48.995 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 5(Long)
+2020-09-02 19:37:48.995 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:37:48.996 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:37:48.996 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 4(Long)
+2020-09-02 19:37:48.997 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:37:48.998 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:37:48.998 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 3(Long)
+2020-09-02 19:37:48.999 DEBUG 29212 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:37:48.999 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:37:49.000 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 7(Long), 18(Long)
+2020-09-02 19:37:49.034 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:37:49.035 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:37:49.035 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 8(Long), 18(Long)
+2020-09-02 19:37:49.038 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:37:49.038 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:37:49.039 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 5(Long), 18(Long)
+2020-09-02 19:37:49.041 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:37:49.041 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:37:49.042 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 4(Long), 18(Long)
+2020-09-02 19:37:49.044 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:37:49.044 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:37:49.045 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 3(Long), 18(Long)
+2020-09-02 19:37:49.047 DEBUG 29212 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:37:49.048 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==>  Preparing: update t_blog set published = ?,flag = ? , title = ?, content = ?, type_id = ?, tag_ids = ?, first_picture = ? , description = ? , recommend = ? , share_statement = ?, appreciation = ?, commentabled = ? ,update_time = ? where id = ?;
+2020-09-02 19:37:49.049 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==> Parameters: false(Boolean), 转载(String), 刀剑神域(String), # 大萨达
+
+### 大萨达打的
+
+
+###### 大神的是
+`import java.util.*`(String), 3(Long), 7,8,5,4,3(String), www.1223.com(String), 123(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-09-02 19:37:48.999(Timestamp), 18(Long)
+2020-09-02 19:37:49.082 DEBUG 29212 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.updateBlog  : <==    Updates: 1
+2020-09-02 19:37:49.099 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:37:49.099 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:37:49.100 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:37:49.100 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:37:49.100 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:37:49.103 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 7
+2020-09-02 19:37:49.105 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:37:49.105 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:37:49.106 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:37:49.107 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:37:49.107 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:37:49.108 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:38:14.383 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:38:14.383 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:38:14.384 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:38:14.384 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:38:14.384 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:38:14.388 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 7
+2020-09-02 19:38:14.390 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:38:14.390 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:38:14.392 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:38:14.394 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:38:14.395 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:38:14.396 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:38:16.684 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:38:16.685 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:38:16.686 DEBUG 29212 --- [http-nio-8080-exec-2] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:38:16.687 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:38:16.687 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:38:16.688 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:38:32.989 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:38:32.989 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 6(Long)
+2020-09-02 19:38:32.990 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:38:32.992 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:38:32.992 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 2(Long)
+2020-09-02 19:38:32.993 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:38:32.994 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:38:32.994 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 1(Long)
+2020-09-02 19:38:32.995 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:38:32.995 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:38:32.995 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 3(Long)
+2020-09-02 19:38:32.996 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:38:32.996 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==>  Preparing: insert into t_blog (title, content, first_picture, flag, views, appreciation, share_statement, commentabled,published, recommend, create_time, update_time, type_id, tag_ids, user_id, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+2020-09-02 19:38:32.998 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==> Parameters: 为了女儿(String), 1111111111111111(String), www.1223.com(String), (String), 0(Integer), false(Boolean), false(Boolean), false(Boolean), true(Boolean), true(Boolean), 2020-09-02 19:38:32.996(Timestamp), 2020-09-02 19:38:32.996(Timestamp), 6(Long), 2,1,3(String), 1(Long), 11111(String)
+2020-09-02 19:38:33.000 DEBUG 29212 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.BlogDao.saveBlog   : <==    Updates: 1
+2020-09-02 19:38:33.003 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:38:33.003 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 2(Long), 19(Long)
+2020-09-02 19:38:33.006 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:38:33.006 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:38:33.006 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 1(Long), 19(Long)
+2020-09-02 19:38:33.008 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:38:33.009 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:38:33.009 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 3(Long), 19(Long)
+2020-09-02 19:38:33.011 DEBUG 29212 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:38:33.020 DEBUG 29212 --- [http-nio-8080-exec-9] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:38:33.021 DEBUG 29212 --- [http-nio-8080-exec-9] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:38:33.021 DEBUG 29212 --- [http-nio-8080-exec-9] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:38:33.022 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:38:33.022 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:38:33.025 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:38:33.026 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:38:33.026 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:38:33.027 DEBUG 29212 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:38:33.028 DEBUG 29212 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:38:33.028 DEBUG 29212 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:38:33.029 DEBUG 29212 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:40:07.486 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==>  Preparing: select b.id, b.published, b.flag, b.title, b.content, b.type_id, b.tag_ids, b.first_picture, b.description, b.recommend, b.share_statement, b.appreciation, b.commentabled, t.id typeid, t.name typename ,tag.id tagid , tag.name tagname from t_blog b ,t_type t , t_tag tag , t_blog_tags tb where b.type_id = t.id AND tb.blog_id = b.id AND tb.tag_id = tag.id and b.id = ?;
+2020-09-02 19:40:07.487 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==> Parameters: 19(Long)
+2020-09-02 19:40:07.490 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : <==      Total: 3
+2020-09-02 19:40:07.491 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:40:07.491 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:40:07.492 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:40:07.494 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:40:07.494 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:40:07.496 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:40:10.763 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:40:10.764 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 6(Long)
+2020-09-02 19:40:10.765 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:40:10.767 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:40:10.767 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 2(Long)
+2020-09-02 19:40:10.768 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:40:10.769 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:40:10.769 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 1(Long)
+2020-09-02 19:40:10.770 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:40:10.770 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:40:10.770 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 3(Long)
+2020-09-02 19:40:10.771 DEBUG 29212 --- [http-nio-8080-exec-7] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:40:10.772 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:40:10.772 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 2(Long), 19(Long)
+2020-09-02 19:40:10.775 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:40:10.775 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:40:10.776 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 1(Long), 19(Long)
+2020-09-02 19:40:10.779 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:40:10.779 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:40:10.779 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 3(Long), 19(Long)
+2020-09-02 19:40:10.781 DEBUG 29212 --- [http-nio-8080-exec-7] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:40:10.782 DEBUG 29212 --- [http-nio-8080-exec-7] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==>  Preparing: update t_blog set published = ?,flag = ? , title = ?, content = ?, type_id = ?, tag_ids = ?, first_picture = ? , description = ? , recommend = ? , share_statement = ?, appreciation = ?, commentabled = ? ,update_time = ? where id = ?;
+2020-09-02 19:40:10.783 DEBUG 29212 --- [http-nio-8080-exec-7] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==> Parameters: true(Boolean), (String), 为了女儿(String), 1111111111111111(String), 6(Long), 2,1,3(String), www.1223.com(String), 11111(String), true(Boolean), false(Boolean), false(Boolean), false(Boolean), 2020-09-02 19:40:10.772(Timestamp), 19(Long)
+2020-09-02 19:40:10.786 DEBUG 29212 --- [http-nio-8080-exec-7] c.sinap.zengblog.dao.BlogDao.updateBlog  : <==    Updates: 1
+2020-09-02 19:40:10.795 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:40:10.795 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:40:10.796 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:40:10.796 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:40:10.796 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:40:10.798 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:40:10.799 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:40:10.799 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:40:10.800 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:40:10.801 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:40:10.801 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:40:10.801 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:40:53.865 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==>  Preparing: select b.id, b.published, b.flag, b.title, b.content, b.type_id, b.tag_ids, b.first_picture, b.description, b.recommend, b.share_statement, b.appreciation, b.commentabled, t.id typeid, t.name typename ,tag.id tagid , tag.name tagname from t_blog b ,t_type t , t_tag tag , t_blog_tags tb where b.type_id = t.id AND tb.blog_id = b.id AND tb.tag_id = tag.id and b.id = ?;
+2020-09-02 19:40:53.865 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==> Parameters: 19(Long)
+2020-09-02 19:40:53.867 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.BlogDao.getBlog    : <==      Total: 6
+2020-09-02 19:40:53.868 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:40:53.869 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:40:53.870 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:40:53.871 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:40:53.872 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:40:53.872 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:41:30.067 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:41:30.067 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 6(Long)
+2020-09-02 19:41:30.068 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:41:30.069 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:41:30.069 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 2(Long)
+2020-09-02 19:41:30.070 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:41:30.070 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:41:30.070 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 1(Long)
+2020-09-02 19:41:30.071 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:41:30.072 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:41:30.072 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 3(Long)
+2020-09-02 19:41:30.073 DEBUG 29212 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:41:30.073 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:41:30.073 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 2(Long), 19(Long)
+2020-09-02 19:41:30.085 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:41:30.085 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:41:30.085 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 1(Long), 19(Long)
+2020-09-02 19:41:30.087 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:41:30.087 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:41:30.088 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 3(Long), 19(Long)
+2020-09-02 19:41:30.089 DEBUG 29212 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:41:30.090 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==>  Preparing: update t_blog set published = ?,flag = ? , title = ?, content = ?, type_id = ?, tag_ids = ?, first_picture = ? , description = ? , recommend = ? , share_statement = ?, appreciation = ?, commentabled = ? ,update_time = ? where id = ?;
+2020-09-02 19:41:30.091 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==> Parameters: true(Boolean), 原创(String), 为了女儿(String), 1111111111111111(String), 6(Long), 2,1,3(String), www.1223.com(String), 11111(String), true(Boolean), false(Boolean), false(Boolean), false(Boolean), 2020-09-02 19:41:30.073(Timestamp), 19(Long)
+2020-09-02 19:41:30.094 DEBUG 29212 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.updateBlog  : <==    Updates: 1
+2020-09-02 19:41:30.104 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:41:30.104 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:41:30.105 DEBUG 29212 --- [http-nio-8080-exec-5] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:41:30.105 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:41:30.105 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:41:30.107 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:41:30.109 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:41:30.109 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:41:30.109 DEBUG 29212 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:41:30.110 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:41:30.110 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:41:30.111 DEBUG 29212 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:43:08.157  INFO 3768 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 3768 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 19:43:08.159 DEBUG 3768 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 19:43:08.160  INFO 3768 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 19:43:08.228  INFO 3768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 19:43:08.228  INFO 3768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 19:43:09.627  INFO 3768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 19:43:09.634  INFO 3768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 19:43:09.634  INFO 3768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 19:43:09.728  INFO 3768 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 19:43:09.728  INFO 3768 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1500 ms
+2020-09-02 19:43:10.403  INFO 3768 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 19:43:10.520  INFO 3768 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 19:43:10.576  INFO 3768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 19:43:10.606  INFO 3768 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 19:43:10.935  INFO 3768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 19:43:10.936  INFO 3768 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 19:43:10.944  INFO 3768 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 19:43:10.973  INFO 3768 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 19:43:11.058  INFO 3768 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 19:43:11.075  INFO 3768 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.672 seconds (JVM running for 4.573)
+2020-09-02 19:43:16.272  INFO 3768 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=FCA1656589DD2A1536BCB4B2B213293A; monitor_count=856] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 19:43:16.277  INFO 3768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 19:43:16.278  INFO 3768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 19:43:16.286  INFO 3768 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-09-02 19:43:20.611  INFO 3768 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 19:43:20.701  INFO 3768 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 19:43:20.705 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-09-02 19:43:20.719 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : ==> Parameters: zengchao(String), 202cb962ac59075b964b07152d234b70(String)
+2020-09-02 19:43:20.732 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : <==      Total: 1
+2020-09-02 19:43:22.232 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:43:22.232 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:43:22.233 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:43:22.234 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:43:22.234 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:43:22.238 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:43:22.247 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:43:22.247 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:43:22.249 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:43:22.250 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:43:22.250 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:43:22.252 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:43:25.095 DEBUG 3768 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.deleteBlog  : ==>  Preparing: delete from t_blog where id = ?
+2020-09-02 19:43:25.095 DEBUG 3768 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.deleteBlog  : ==> Parameters: 19(Long)
+2020-09-02 19:43:25.099 DEBUG 3768 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.deleteBlog  : <==    Updates: 1
+2020-09-02 19:43:25.118 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:43:25.118 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:43:25.119 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:43:25.119 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:43:25.119 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:43:25.122 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 7
+2020-09-02 19:43:25.122 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:43:25.123 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:43:25.124 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:43:25.125 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:43:25.125 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:43:25.127 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:43:31.078 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:43:31.078 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:43:31.079 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:43:31.080 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:43:31.081 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:43:31.081 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:43:43.223 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:43:43.224 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 2(Long)
+2020-09-02 19:43:43.224 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:43:43.225 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:43:43.226 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 4(Long)
+2020-09-02 19:43:43.226 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:43:43.227 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==>  Preparing: insert into t_blog (title, content, first_picture, flag, views, appreciation, share_statement, commentabled,published, recommend, create_time, update_time, type_id, tag_ids, user_id, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+2020-09-02 19:43:43.228 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==> Parameters: 物语(String), 111111111(String), www.1223.com(String), (String), 0(Integer), false(Boolean), false(Boolean), true(Boolean), true(Boolean), false(Boolean), 2020-09-02 19:43:43.226(Timestamp), 2020-09-02 19:43:43.226(Timestamp), 2(Long), 4(String), 1(Long), 111111111111111111(String)
+2020-09-02 19:43:43.231 DEBUG 3768 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.BlogDao.saveBlog   : <==    Updates: 1
+2020-09-02 19:43:43.233 DEBUG 3768 --- [http-nio-8080-exec-8] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:43:43.234 DEBUG 3768 --- [http-nio-8080-exec-8] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 4(Long), 20(Long)
+2020-09-02 19:43:43.241 DEBUG 3768 --- [http-nio-8080-exec-8] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:43:43.248 DEBUG 3768 --- [http-nio-8080-exec-4] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:43:43.249 DEBUG 3768 --- [http-nio-8080-exec-4] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:43:43.250 DEBUG 3768 --- [http-nio-8080-exec-4] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:43:43.250 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:43:43.250 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:43:43.255 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:43:43.257 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:43:43.257 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:43:43.258 DEBUG 3768 --- [http-nio-8080-exec-4] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:43:43.260 DEBUG 3768 --- [http-nio-8080-exec-4] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:43:43.260 DEBUG 3768 --- [http-nio-8080-exec-4] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:43:43.260 DEBUG 3768 --- [http-nio-8080-exec-4] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:45:49.519 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==>  Preparing: select b.id, b.published, b.flag, b.title, b.content, b.type_id, b.tag_ids, b.first_picture, b.description, b.recommend, b.share_statement, b.appreciation, b.commentabled, t.id typeid, t.name typename ,tag.id tagid , tag.name tagname from t_blog b ,t_type t , t_tag tag , t_blog_tags tb where b.type_id = t.id AND tb.blog_id = b.id AND tb.tag_id = tag.id and b.id = ?;
+2020-09-02 19:45:49.520 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : ==> Parameters: 20(Long)
+2020-09-02 19:45:49.524 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.BlogDao.getBlog    : <==      Total: 1
+2020-09-02 19:45:49.525 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:45:49.525 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:45:49.526 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:45:49.529 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:45:49.529 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:45:49.530 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:45:53.859 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:45:53.859 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 2(Long)
+2020-09-02 19:45:53.860 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:45:53.861 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:45:53.861 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 4(Long)
+2020-09-02 19:45:53.862 DEBUG 3768 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:45:53.862 DEBUG 3768 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:45:53.862 DEBUG 3768 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 4(Long), 20(Long)
+2020-09-02 19:45:53.867 DEBUG 3768 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:45:53.867 DEBUG 3768 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==>  Preparing: update t_blog set published = ?,flag = ? , title = ?, content = ?, type_id = ?, tag_ids = ?, first_picture = ? , description = ? , recommend = ? , share_statement = ?, appreciation = ?, commentabled = ? ,update_time = ? where id = ?;
+2020-09-02 19:45:53.868 DEBUG 3768 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.updateBlog  : ==> Parameters: true(Boolean), 原创(String), 物语(String), 111111111(String), 2(Long), 4(String), www.1223.com(String), 111111111111111111(String), false(Boolean), false(Boolean), false(Boolean), true(Boolean), 2020-09-02 19:45:53.862(Timestamp), 20(Long)
+2020-09-02 19:45:53.870 DEBUG 3768 --- [http-nio-8080-exec-9] c.sinap.zengblog.dao.BlogDao.updateBlog  : <==    Updates: 1
+2020-09-02 19:45:53.881 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:45:53.882 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:45:53.882 DEBUG 3768 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:45:53.883 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:45:53.883 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:45:53.885 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:45:53.886 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:45:53.886 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:45:53.886 DEBUG 3768 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:45:53.887 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:45:53.888 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:45:53.888 DEBUG 3768 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:49:43.950  INFO 10876 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 10876 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 19:49:43.951 DEBUG 10876 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 19:49:43.952  INFO 10876 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 19:49:43.988  INFO 10876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 19:49:43.989  INFO 10876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 19:49:45.084  INFO 10876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 19:49:45.090  INFO 10876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 19:49:45.090  INFO 10876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 19:49:45.147  INFO 10876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 19:49:45.148  INFO 10876 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1158 ms
+2020-09-02 19:49:45.666  INFO 10876 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 19:49:45.784  INFO 10876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 19:49:45.833  INFO 10876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 19:49:45.855  INFO 10876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 19:49:46.135  INFO 10876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 19:49:46.135  INFO 10876 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 19:49:46.143  INFO 10876 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 19:49:46.173  INFO 10876 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 19:49:46.244  INFO 10876 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 19:49:46.260  INFO 10876 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 2.636 seconds (JVM running for 3.258)
+2020-09-02 19:49:48.758  INFO 10876 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=FA4ABE07462F494A88B477876698D2B2; monitor_count=864] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 19:49:48.764  INFO 10876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 19:49:48.764  INFO 10876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 19:49:48.773  INFO 10876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-09-02 19:49:51.733  INFO 10876 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 19:49:51.821  INFO 10876 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 19:49:51.825 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : ==>  Preparing: select * from t_user where username = ? and password = ?
+2020-09-02 19:49:51.843 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : ==> Parameters: zengchao(String), 202cb962ac59075b964b07152d234b70(String)
+2020-09-02 19:49:51.856 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.d.U.findUserByUsernameAndPassword  : <==      Total: 1
+2020-09-02 19:49:53.185 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:49:53.186 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:49:53.187 DEBUG 10876 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:49:53.188 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:49:53.188 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:49:53.193 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:49:53.201 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:49:53.201 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:49:53.202 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:49:53.204 DEBUG 10876 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:49:53.204 DEBUG 10876 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:49:53.205 DEBUG 10876 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:49:55.075 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.deleteBlog  : ==>  Preparing: delete from t_blog where id = ?
+2020-09-02 19:49:55.076 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.deleteBlog  : ==> Parameters: 20(Long)
+2020-09-02 19:49:55.086 DEBUG 10876 --- [http-nio-8080-exec-1] c.sinap.zengblog.dao.BlogDao.deleteBlog  : <==    Updates: 1
+2020-09-02 19:49:55.103 DEBUG 10876 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:49:55.103 DEBUG 10876 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:49:55.104 DEBUG 10876 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:49:55.105 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:49:55.106 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:49:55.109 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 7
+2020-09-02 19:49:55.110 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:49:55.110 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:49:55.111 DEBUG 10876 --- [http-nio-8080-exec-3] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:49:55.112 DEBUG 10876 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:49:55.112 DEBUG 10876 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:49:55.113 DEBUG 10876 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:49:56.418 DEBUG 10876 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:49:56.419 DEBUG 10876 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:49:56.420 DEBUG 10876 --- [http-nio-8080-exec-5] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:49:56.421 DEBUG 10876 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:49:56.422 DEBUG 10876 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:49:56.423 DEBUG 10876 --- [http-nio-8080-exec-5] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:50:06.610 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : ==>  Preparing: select * from t_type where id = ?
+2020-09-02 19:50:06.610 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : ==> Parameters: 1(Long)
+2020-09-02 19:50:06.611 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TypeDao.getType    : <==      Total: 1
+2020-09-02 19:50:06.612 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : ==>  Preparing: select * from t_tag where id = ?
+2020-09-02 19:50:06.612 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : ==> Parameters: 1(Long)
+2020-09-02 19:50:06.613 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.TagDao.getTag      : <==      Total: 1
+2020-09-02 19:50:06.614 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==>  Preparing: insert into t_blog (title, content, first_picture, flag, views, appreciation, share_statement, commentabled,published, recommend, create_time, update_time, type_id, tag_ids, user_id, description) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+2020-09-02 19:50:06.616 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.BlogDao.saveBlog   : ==> Parameters: 物语(String), 1(String), www.1223.com(String), 原创(String), 0(Integer), false(Boolean), false(Boolean), false(Boolean), true(Boolean), false(Boolean), 2020-09-02 19:50:06.613(Timestamp), 2020-09-02 19:50:06.613(Timestamp), 1(Long), 1(String), 1(Long), 1(String)
+2020-09-02 19:50:06.619 DEBUG 10876 --- [http-nio-8080-exec-9] cn.sinap.zengblog.dao.BlogDao.saveBlog   : <==    Updates: 1
+2020-09-02 19:50:06.621 DEBUG 10876 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==>  Preparing: insert into t_blog_tags (tag_id, blog_id) values (?,?);
+2020-09-02 19:50:06.622 DEBUG 10876 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : ==> Parameters: 1(Long), 21(Long)
+2020-09-02 19:50:06.624 DEBUG 10876 --- [http-nio-8080-exec-9] c.s.zengblog.dao.BlogDao.saveBlogAndTag  : <==    Updates: 1
+2020-09-02 19:50:06.633 DEBUG 10876 --- [http-nio-8080-exec-8] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t WHERE b.type_id = t.id
+2020-09-02 19:50:06.634 DEBUG 10876 --- [http-nio-8080-exec-8] c.s.z.dao.BlogDao.getAllBlog_COUNT       : ==> Parameters: 
+2020-09-02 19:50:06.634 DEBUG 10876 --- [http-nio-8080-exec-8] c.s.z.dao.BlogDao.getAllBlog_COUNT       : <==      Total: 1
+2020-09-02 19:50:06.635 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==>  Preparing: select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published, t.id typeid, t.name typename from t_blog b, t_type t where b.type_id = t.id LIMIT ?
+2020-09-02 19:50:06.635 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.getAllBlog  : ==> Parameters: 8(Integer)
+2020-09-02 19:50:06.638 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.BlogDao.getAllBlog  : <==      Total: 8
+2020-09-02 19:50:06.639 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.TypeDao.getAllType  : ==>  Preparing: select * from t_type
+2020-09-02 19:50:06.639 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.TypeDao.getAllType  : ==> Parameters: 
+2020-09-02 19:50:06.641 DEBUG 10876 --- [http-nio-8080-exec-8] c.sinap.zengblog.dao.TypeDao.getAllType  : <==      Total: 9
+2020-09-02 19:50:06.642 DEBUG 10876 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==>  Preparing: select * from t_tag
+2020-09-02 19:50:06.642 DEBUG 10876 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getAllTag   : ==> Parameters: 
+2020-09-02 19:50:06.643 DEBUG 10876 --- [http-nio-8080-exec-8] cn.sinap.zengblog.dao.TagDao.getAllTag   : <==      Total: 9
+2020-09-02 19:54:42.241  INFO 10076 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 10076 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 19:54:42.246 DEBUG 10076 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 19:54:42.246  INFO 10076 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 19:54:42.311  INFO 10076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 19:54:42.311  INFO 10076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 19:54:43.820  INFO 10076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 19:54:43.830  INFO 10076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 19:54:43.830  INFO 10076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 19:54:43.910  INFO 10076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 19:54:43.910  INFO 10076 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1598 ms
+2020-09-02 19:54:44.558  INFO 10076 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 19:54:44.689  INFO 10076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 19:54:44.748  INFO 10076 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 19:54:44.772  INFO 10076 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 19:54:45.068  INFO 10076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 19:54:45.069  INFO 10076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 19:54:45.076  INFO 10076 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 19:54:45.102  INFO 10076 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 19:54:45.174  INFO 10076 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 19:54:45.191  INFO 10076 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.377 seconds (JVM running for 3.968)
+2020-09-02 19:54:58.759  INFO 10076 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=C90E2996E4851332B45F3A9C7D304213; monitor_count=871] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 19:54:58.764  INFO 10076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 19:54:58.764  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 19:54:58.772  INFO 10076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-09-02 19:55:09.224  INFO 10076 --- [http-nio-8080-exec-9] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/index', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[]} 
+2020-09-02 19:55:09.228  INFO 10076 --- [http-nio-8080-exec-9] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 20:44:55.360  INFO 1264 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 1264 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 20:44:55.363 DEBUG 1264 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 20:44:55.363  INFO 1264 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 20:44:55.411  INFO 1264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 20:44:55.411  INFO 1264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 20:44:56.504  INFO 1264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 20:44:56.511  INFO 1264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 20:44:56.511  INFO 1264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 20:44:56.572  INFO 1264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 20:44:56.572  INFO 1264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2020-09-02 20:44:57.131  INFO 1264 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 20:44:57.244  INFO 1264 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 20:44:57.292  INFO 1264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 20:44:57.319  INFO 1264 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 20:44:57.614  INFO 1264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 20:44:57.615  INFO 1264 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 20:44:57.623  INFO 1264 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 20:44:57.653  INFO 1264 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 20:44:57.739  INFO 1264 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 20:44:57.757  INFO 1264 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 2.751 seconds (JVM running for 3.413)
+2020-09-02 20:45:27.249  INFO 1264 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=046C15E0154FB63B771F45010F88AD10; monitor_count=904] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 20:45:27.259  INFO 1264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 20:45:27.259  INFO 1264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 20:45:27.269  INFO 1264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-09-02 20:45:28.227  INFO 1264 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 20:45:28.275  INFO 1264 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 20:45:28.361  INFO 1264 --- [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 20:45:28.367 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 20:45:28.385 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 20:45:28.410 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 20:45:28.414 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 20:45:28.414 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 20:45:28.422 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 20:45:28.425 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc;
+2020-09-02 20:45:28.426 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 20:45:28.428 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 8
+2020-09-02 20:45:28.435 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 20:45:28.435 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 20:45:28.439 DEBUG 1264 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 20:45:28.442 DEBUG 1264 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 20:45:28.442 DEBUG 1264 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 20:45:28.446 DEBUG 1264 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 20:45:28.447  INFO 1264 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 20:45:48.057  INFO 1264 --- [http-nio-8080-exec-10] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 20:45:48.060 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 20:45:48.060 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 20:45:48.060 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 20:45:48.061 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 20:45:48.061 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 20:45:48.064 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 20:45:48.065 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog order by update_time desc;
+2020-09-02 20:45:48.065 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 20:45:48.068 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 8
+2020-09-02 20:45:48.069 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 20:45:48.070 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 20:45:48.072 DEBUG 1264 --- [http-nio-8080-exec-10] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 20:45:48.073 DEBUG 1264 --- [http-nio-8080-exec-10] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 20:45:48.073 DEBUG 1264 --- [http-nio-8080-exec-10] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 20:45:48.074 DEBUG 1264 --- [http-nio-8080-exec-10] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 20:45:48.075  INFO 1264 --- [http-nio-8080-exec-10] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 20:47:15.764  INFO 16748 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 16748 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 20:47:15.766 DEBUG 16748 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 20:47:15.766  INFO 16748 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 20:47:15.805  INFO 16748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 20:47:15.805  INFO 16748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 20:47:17.423  INFO 16748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 20:47:17.429  INFO 16748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 20:47:17.430  INFO 16748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 20:47:17.488  INFO 16748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 20:47:17.488  INFO 16748 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1683 ms
+2020-09-02 20:47:18.150  INFO 16748 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 20:47:18.288  INFO 16748 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 20:47:18.358  INFO 16748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 20:47:18.388  INFO 16748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 20:47:18.769  INFO 16748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 20:47:18.770  INFO 16748 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 20:47:18.784  INFO 16748 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 20:47:18.816  INFO 16748 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 20:47:18.889  INFO 16748 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 20:47:18.906  INFO 16748 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.519 seconds (JVM running for 4.071)
+2020-09-02 20:47:29.012  INFO 16748 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=046C15E0154FB63B771F45010F88AD10; monitor_count=907] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 20:47:29.018  INFO 16748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 20:47:29.018  INFO 16748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 20:47:29.027  INFO 16748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-09-02 20:47:29.046  INFO 16748 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 20:47:29.078  INFO 16748 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 20:47:29.154  INFO 16748 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 20:47:29.158 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 20:47:29.172 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 20:47:29.184 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 20:47:29.188 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 20:47:29.188 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 20:47:29.192 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 20:47:29.194 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog where recomment = 1 order by update_time desc;
+2020-09-02 20:47:29.194 DEBUG 16748 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 20:47:29.253 ERROR 16748 --- [http-nio-8080-exec-1] c.s.z.h.ControllerExceptionHandler       : Request URL : http://localhost:8080/ , Exception : 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause'
+### The error may exist in file [E:\JavaItem\BlogZeng\zengblog\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select id, title, recommend from t_blog where recomment = 1 order by update_time desc;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause'
+2020-09-02 20:47:29.256  WARN 16748 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause'
+### The error may exist in file [E:\JavaItem\BlogZeng\zengblog\target\classes\mapper\BlogDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select id, title, recommend from t_blog where recomment = 1 order by update_time desc;
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'recomment' in 'where clause']
+2020-09-02 20:47:58.292  INFO 27032 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 27032 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 20:47:58.294 DEBUG 27032 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 20:47:58.295  INFO 27032 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 20:47:58.347  INFO 27032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 20:47:58.347  INFO 27032 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 20:48:00.032  INFO 27032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 20:48:00.039  INFO 27032 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 20:48:00.040  INFO 27032 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 20:48:00.122  INFO 27032 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 20:48:00.122  INFO 27032 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1775 ms
+2020-09-02 20:48:00.884  INFO 27032 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 20:48:01.063  INFO 27032 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 20:48:01.148  INFO 27032 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 20:48:01.202  INFO 27032 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 20:48:01.539  INFO 27032 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 20:48:01.539  INFO 27032 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 20:48:01.551  INFO 27032 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 20:48:01.594  INFO 27032 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 20:48:01.686  INFO 27032 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 20:48:01.707  INFO 27032 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.738 seconds (JVM running for 4.353)
+2020-09-02 20:48:03.048  INFO 27032 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=046C15E0154FB63B771F45010F88AD10; monitor_count=908] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 20:48:03.057  INFO 27032 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 20:48:03.058  INFO 27032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 20:48:03.068  INFO 27032 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-09-02 20:48:03.091  INFO 27032 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 20:48:03.129  INFO 27032 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 20:48:03.202  INFO 27032 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 20:48:03.207 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 20:48:03.220 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 20:48:03.232 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 20:48:03.235 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 20:48:03.235 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 20:48:03.239 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 20:48:03.241 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog where recommend = 1 order by update_time desc;
+2020-09-02 20:48:03.241 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 20:48:03.242 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 4
+2020-09-02 20:48:03.250 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 20:48:03.250 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 20:48:03.255 DEBUG 27032 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 20:48:03.257 DEBUG 27032 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 20:48:03.257 DEBUG 27032 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 20:48:03.260 DEBUG 27032 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 20:48:03.261  INFO 27032 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 20:49:50.620  INFO 27032 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 20:49:50.622 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 20:49:50.623 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 20:49:50.624 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 20:49:50.624 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 20:49:50.624 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 20:49:50.640 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 20:49:50.640 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog where recommend = 1 order by update_time desc;
+2020-09-02 20:49:50.641 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 20:49:50.642 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 4
+2020-09-02 20:49:50.643 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 20:49:50.643 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 20:49:50.645 DEBUG 27032 --- [http-nio-8080-exec-3] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 20:49:50.646 DEBUG 27032 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 20:49:50.646 DEBUG 27032 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 20:49:50.648 DEBUG 27032 --- [http-nio-8080-exec-3] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 20:49:50.649  INFO 27032 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 21:18:33.200  INFO 33968 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 33968 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 21:18:33.202 DEBUG 33968 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 21:18:33.203  INFO 33968 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 21:18:33.254  INFO 33968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 21:18:33.254  INFO 33968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 21:18:34.595  INFO 33968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 21:18:34.601  INFO 33968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 21:18:34.601  INFO 33968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 21:18:34.656  INFO 33968 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 21:18:34.656  INFO 33968 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1401 ms
+2020-09-02 21:18:35.203  INFO 33968 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 21:18:35.314  INFO 33968 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 21:18:35.365  INFO 33968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 21:18:35.392  INFO 33968 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 21:18:35.702  INFO 33968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 21:18:35.703  INFO 33968 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 21:18:35.715  INFO 33968 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 21:18:35.744  INFO 33968 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 21:18:35.823  INFO 33968 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 21:18:35.839  INFO 33968 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.142 seconds (JVM running for 3.981)
+2020-09-02 21:19:10.143  INFO 33968 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=046C15E0154FB63B771F45010F88AD10; monitor_count=918] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 21:19:10.149  INFO 33968 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 21:19:10.149  INFO 33968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 21:19:10.156  INFO 33968 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-09-02 21:19:10.571  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 21:19:10.611  INFO 33968 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 21:19:10.687  INFO 33968 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 21:19:10.693 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 21:19:10.709 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 21:19:10.722 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 21:19:10.727 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 21:19:10.728 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 21:19:10.732 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 21:19:10.734 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog where recommend = 1 order by update_time desc;
+2020-09-02 21:19:10.734 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 21:19:10.735 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 4
+2020-09-02 21:19:10.743 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 21:19:10.743 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 21:19:10.747 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 21:19:10.749 DEBUG 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 21:19:10.749 DEBUG 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 21:19:10.751 DEBUG 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 21:19:10.753  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 21:19:12.894  INFO 33968 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/6', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[6, {}]} 
+2020-09-02 21:19:12.897 DEBUG 33968 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:19:12.897 DEBUG 33968 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 6(Long)
+2020-09-02 21:19:12.899 DEBUG 33968 --- [http-nio-8080-exec-3] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:19:12.917  INFO 33968 --- [http-nio-8080-exec-3] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:19:36.946  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/21', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[21, {}]} 
+2020-09-02 21:19:36.947 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:19:36.947 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 21(Long)
+2020-09-02 21:19:36.958 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:19:36.959  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:19:43.059  INFO 33968 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/18', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[18, {}]} 
+2020-09-02 21:19:43.060 DEBUG 33968 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:19:43.060 DEBUG 33968 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 18(Long)
+2020-09-02 21:19:43.064 DEBUG 33968 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 10
+2020-09-02 21:19:43.065  INFO 33968 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:19:51.677  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/6', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[6, {}]} 
+2020-09-02 21:19:51.678 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:19:51.679 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 6(Long)
+2020-09-02 21:19:51.680 DEBUG 33968 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:19:51.682  INFO 33968 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:22:59.008  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 28640 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 21:22:59.010 DEBUG 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 21:22:59.010  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 21:22:59.093  INFO 28640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-02 21:22:59.093  INFO 28640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-02 21:23:00.621  INFO 28640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 21:23:00.628  INFO 28640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 21:23:00.628  INFO 28640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 21:23:00.704  INFO 28640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 21:23:00.704  INFO 28640 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1611 ms
+2020-09-02 21:23:01.394  INFO 28640 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 21:23:01.509  INFO 28640 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 21:23:01.560  INFO 28640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 21:23:01.586  INFO 28640 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 21:23:01.916  INFO 28640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 21:23:01.917  INFO 28640 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 21:23:01.926  INFO 28640 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 21:23:01.960  INFO 28640 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 21:23:02.033  INFO 28640 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 21:23:02.051  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 3.528 seconds (JVM running for 4.164)
+2020-09-02 21:23:15.226  INFO 28640 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1597921201; JSESSIONID=046C15E0154FB63B771F45010F88AD10; monitor_count=923] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-09-02 21:23:15.232  INFO 28640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 21:23:15.233  INFO 28640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 21:23:15.242  INFO 28640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-09-02 21:23:15.261  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.index', args=[1, {}]} 
+2020-09-02 21:23:15.295  INFO 28640 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-02 21:23:15.373  INFO 28640 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-02 21:23:15.378 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==>  Preparing: SELECT count(0) FROM t_blog b, t_type t, t_user u WHERE b.type_id = t.id AND u.id = b.user_id
+2020-09-02 21:23:15.392 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : ==> Parameters: 
+2020-09-02 21:23:15.404 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getIndexBlog_COUNT     : <==      Total: 1
+2020-09-02 21:23:15.408 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==>  Preparing: select b.id, b.title, b.first_picture, b.views, b.update_time, b.description, t.name typename, t.id typeid, u.nickname, u.avatar from t_blog b, t_type t, t_user u where b.type_id = t.id and u.id = b.user_id order by b.update_time desc LIMIT ?
+2020-09-02 21:23:15.408 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : ==> Parameters: 5(Integer)
+2020-09-02 21:23:15.412 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.BlogDao.getIndexBlog    : <==      Total: 5
+2020-09-02 21:23:15.415 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==>  Preparing: select id, title, recommend from t_blog where recommend = 1 order by update_time desc;
+2020-09-02 21:23:15.416 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : ==> Parameters: 
+2020-09-02 21:23:15.417 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getAllRecommendBlog    : <==      Total: 4
+2020-09-02 21:23:15.424 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : ==>  Preparing: select t.id tid , t.name , b.id bid , b.title , b.type_id from t_type t , t_blog b where t.id = b.type_id
+2020-09-02 21:23:15.424 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : ==> Parameters: 
+2020-09-02 21:23:15.427 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.zengblog.dao.TypeDao.getBlogType     : <==      Total: 8
+2020-09-02 21:23:15.428 DEBUG 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==>  Preparing: select t.id tid, t.name, b.id bid, b.title from t_tag t, t_blog b, t_blog_tags bt where t.id = bt.tag_id and b.id = bt.blog_id
+2020-09-02 21:23:15.429 DEBUG 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : ==> Parameters: 
+2020-09-02 21:23:15.433 DEBUG 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.dao.TagDao.getBlogTag  : <==      Total: 19
+2020-09-02 21:23:15.434  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : result : index
+2020-09-02 21:23:17.449  INFO 28640 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/6', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[6, {}]} 
+2020-09-02 21:23:17.451 DEBUG 28640 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:23:17.452 DEBUG 28640 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 6(Long)
+2020-09-02 21:23:17.453 DEBUG 28640 --- [http-nio-8080-exec-2] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:23:17.473  INFO 28640 --- [http-nio-8080-exec-2] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:23:49.699  INFO 28640 --- [Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-02 21:23:49.701  INFO 28640 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-09-02 21:23:49.707  INFO 28640 --- [Thread-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-09-02 21:23:49.794  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Starting ZengblogApplication on LAPTOP-B6E2K6VB with PID 28640 (E:\JavaItem\BlogZeng\zengblog\target\classes started by Vealroer in E:\JavaItem\BlogZeng\zengblog)
+2020-09-02 21:23:49.794 DEBUG 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Running with Spring Boot v2.3.3.RELEASE, Spring v5.2.8.RELEASE
+2020-09-02 21:23:49.795  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : No active profile set, falling back to default profiles: default
+2020-09-02 21:23:50.095  INFO 28640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-09-02 21:23:50.095  INFO 28640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-02 21:23:50.095  INFO 28640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-02 21:23:50.109  INFO 28640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-02 21:23:50.109  INFO 28640 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 312 ms
+2020-09-02 21:23:50.403  INFO 28640 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-09-02 21:23:50.507  INFO 28640 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 21:23:50.535  INFO 28640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-09-02 21:23:50.547  INFO 28640 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-09-02 21:23:50.749  INFO 28640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-09-02 21:23:50.750  INFO 28640 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-09-02 21:23:50.751  INFO 28640 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-09-02 21:23:50.759  INFO 28640 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-09-02 21:23:50.791  INFO 28640 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteTypeUsingGET_1
+2020-09-02 21:23:50.801  INFO 28640 --- [restartedMain] cn.sinap.zengblog.ZengblogApplication    : Started ZengblogApplication in 1.042 seconds (JVM running for 52.914)
+2020-09-02 21:23:50.803  INFO 28640 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-09-02 21:23:53.753  INFO 28640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-02 21:23:53.754  INFO 28640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-02 21:23:53.759  INFO 28640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-09-02 21:23:53.761  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/6', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[6, {}]} 
+2020-09-02 21:23:53.763  INFO 28640 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-09-02 21:23:53.768  INFO 28640 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-09-02 21:23:53.768 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:23:53.769 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 6(Long)
+2020-09-02 21:23:53.770 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:23:53.773  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:24:11.030  INFO 28640 --- [http-nio-8080-exec-10] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/6', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[6, {}]} 
+2020-09-02 21:24:11.031 DEBUG 28640 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:24:11.032 DEBUG 28640 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 6(Long)
+2020-09-02 21:24:11.034 DEBUG 28640 --- [http-nio-8080-exec-10] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 1
+2020-09-02 21:24:11.035  INFO 28640 --- [http-nio-8080-exec-10] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:24:22.645  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/18', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[18, {}]} 
+2020-09-02 21:24:22.646 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:24:22.646 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 18(Long)
+2020-09-02 21:24:22.648 DEBUG 28640 --- [http-nio-8080-exec-1] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 10
+2020-09-02 21:24:22.649  INFO 28640 --- [http-nio-8080-exec-1] cn.sinap.zengblog.aspect.LogAspect       : result : blog
+2020-09-02 21:58:49.460  INFO 28640 --- [http-nio-8080-exec-7] cn.sinap.zengblog.aspect.LogAspect       : Request : ResultLog{url='/blog/18', id='0:0:0:0:0:0:0:1', classMethod='cn.sinap.zengblog.controller.IndexController.blogShow', args=[18, {}]} 
+2020-09-02 21:58:49.461 DEBUG 28640 --- [http-nio-8080-exec-7] c.s.z.dao.BlogDao.getDetailedBlog        : ==>  Preparing: select b.id, b.first_picture, b.flag, b.title, b.content, b.views, b.update_time,b.commentabled, b.share_statement, b.appreciation, u.nickname, u.avatar, tag.id tagid, tag.name tagname from t_blog b, t_user u, t_tag tag, t_blog_tags tb where b.user_id = u.id and tb.blog_id = b.id and tb.tag_id = tag.id and b.id = ?
+2020-09-02 21:58:49.461 DEBUG 28640 --- [http-nio-8080-exec-7] c.s.z.dao.BlogDao.getDetailedBlog        : ==> Parameters: 18(Long)
+2020-09-02 21:58:49.464 DEBUG 28640 --- [http-nio-8080-exec-7] c.s.z.dao.BlogDao.getDetailedBlog        : <==      Total: 10
+2020-09-02 21:58:49.465  INFO 28640 --- [http-nio-8080-exec-7] cn.sinap.zengblog.aspect.LogAspect       : result : blog

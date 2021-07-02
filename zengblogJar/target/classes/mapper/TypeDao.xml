@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.sinap.zengblog.dao.TypeDao">
+    <resultMap id="typeMap" type="cn.sinap.zengblog.domain.Type">
+        <id property="id" column="tid"/>
+        <result property="name" column="name"/>
+        <collection property="blogs" ofType="cn.sinap.zengblog.domain.Blog">
+            <id property="id" column="bid"/>
+            <result property="title" column="title"/>
+            <result property="typeId" column="type_id"/>
+        </collection>
+    </resultMap>
+
+    <insert id="saveType" parameterType="cn.sinap.zengblog.domain.Type">
+        insert into t_type(id,name) values(#{id},#{name})
+    </insert>
+
+    <select id="getType" resultType="cn.sinap.zengblog.domain.Type">
+        select * from t_type where id = #{id}
+    </select>
+
+    <select id="getTypeByName" resultType="cn.sinap.zengblog.domain.Type">
+        select * from t_type where name = #{name}
+    </select>
+
+    <select id="getAllType" resultType="cn.sinap.zengblog.domain.Type">
+        select * from t_type
+    </select>
+    
+     <select id="getBlogType" resultMap="typeMap">
+        select
+            t.id tid , t.name , b.id bid , b.title , b.type_id
+        from
+            t_type t , t_blog b
+        where
+            t.id = b.type_id
+    </select>
+
+    <update id="updateType" parameterType="cn.sinap.zengblog.domain.Type">
+        update t_type set name = #{name}  where id = #{id}
+    </update>
+
+    <delete id="deleteType">
+        delete from t_type where id = #{id}
+    </delete>
+
+
+
+
+
+</mapper>

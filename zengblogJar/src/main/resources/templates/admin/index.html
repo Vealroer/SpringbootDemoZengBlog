@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <!--移动端更好的适应-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/dist/semantic/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
+    <link rel="stylesheet" href="../../static/css/my.css">
+    <title>登录成功</title>
+</head>
+
+<style>
+    #live2dcanvas {
+        border: 0 !important;
+    }
+</style>
+<body>
+<!--导航开始--------------------------------------------->
+<nav th:replace="admin/_fragments :: menu(0)" class="ui inverted attached segment m-padded-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">管理后台</h2>
+            <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>博客</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+            <div class="right m-item m-mobile-hide menu">
+                <div class="ui dropdown item">
+                    <img class="ui avatar image" src="../static/images/me.jpg">曾超
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">修改密码</a>
+                        <a href="#" class="item">个人信息</a>
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui m-menu m-toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--导航结束---------------------------------------------->
+
+
+<!--中间内容开始------------------------------------------>
+<div class="m-container-small m-padded-large">
+    <div class="ui container">
+        <div class="ui success lager message">
+            <h3>Welcome~~~</h3>
+            <p>曾超，欢迎回来~~~</p>
+            <img src="../../static/images/pkq.png" th:src="@{/images/pkq.png}" alt="" class="ui rounded bordered fluid images">
+        </div>
+    </div>
+</div>
+<!--中间内容结束------------------------------------------>
+<br>
+<!--底部内容开始-->
+<footer th:replace="admin/_fragments :: footer" class="ui inverted vertical segment m-padded-massive">
+
+</footer>
+<!--底部内容结束------------------------------------------>
+
+<th:block th:replace="admin/_fragments :: script">
+<script src="../../static/dist/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../static/dist/semantic/semantic.min.js"></script>
+</th:block>
+<script>
+    $('.m-menu.m-toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.ui.dropdown').dropdown({
+        on: 'hover'
+    });
+
+    L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 300,
+            "height": 400,
+            "position": "left",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
+</body>
+</html>
