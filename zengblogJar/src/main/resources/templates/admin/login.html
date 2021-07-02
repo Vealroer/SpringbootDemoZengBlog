@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--移动端更好的适应-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/dist/semantic/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/my.css">
+    <title>博客后台登录</title>
+</head>
+
+<style>
+    #live2dcanvas {
+        border: 0 !important;
+    }
+</style>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="m-container-small m-padded-massive" style="max-width: 30em !important;">
+        <div class="ur container">
+            <div class="ui middle aligned center aligned grid">
+                <div class="column">
+                    <h2 class="ui teal image header">
+                        <img src="../../static/images/me.jpg" th:src="@{/images/me.jpg}" class="image">
+                        <div class="content">
+                            博客后台管理系统
+                        </div>
+                    </h2>
+                    <form class="ui large form" method="post" action="#" th:action="@{/admin/login}">
+                        <div class="ui  segment">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="user icon"></i>
+                                    <input type="text" name="username" placeholder="用户名">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <i class="lock icon"></i>
+                                    <input type="password" name="password" placeholder="密码">
+                                </div>
+                            </div>
+                            <button type="submit" class="ui fluid large teal submit button">登  录</button>
+                        </div>
+
+                        <div class="ui error mini message"></div>
+                        <div class="ui mini negative message" th:text="${message}">错误信息</div>
+
+                    </form>
+
+                    <div class="ui message">
+                        没有账户? <a href="#">暂时不行</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<th:block th:replace="admin/_fragments :: script">
+<script src="../../static/dist/jquery/jquery-3.4.1.min.js"></script>
+<script src="../../static/dist/semantic/semantic.min.js"></script>
+</th:block>
+
+<script>
+    $('.ui.form').form({
+        fields : {
+            username : {
+                identifier: 'username',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入用户名'
+                }]
+            },
+            password : {
+                identifier: 'password',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入密码'
+                }]
+            }
+        }
+    });
+
+    L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 300,
+            "height": 400,
+            "position": "left",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
+
+</body>
+</html>

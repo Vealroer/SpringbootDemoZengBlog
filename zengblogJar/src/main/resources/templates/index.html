@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <!--移动端更好的适应-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/dist/semantic/semantic.min.css" th:href="@{/dist/semantic/semantic.min.css}">
+    <link rel="stylesheet" href="../static/css/my.css" th:href="@{/css/my.css}">
+    <title>首页</title>
+</head>
+<style>
+    #live2dcanvas {
+        border: 0 !important;
+    }
+</style>
+<body>
+    <!--导航开始--------------------------------------------->
+    <nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+                <div class="right m-item item m-mobile-hide">
+                    <div class="ui action input">
+                        <input type="text" placeholder="输入关键字">
+                        <button class="ui button">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="ui m-menu m-toggle black icon button m-right-top m-mobile-show">
+            <i class="sidebar icon"></i>
+        </a>
+    </nav>
+    <!--导航结束---------------------------------------------->
+
+    <!--中间内容开始------------------------------------------>
+    <div class="m-container m-padded-large ">
+        <div class="ui container ">
+            <div class="ui stackable grid">
+
+                <!--中间内容左边开始--------->
+                <div class="eleven wide column">
+
+                    <!--中间内容上面的导航开始 ---->
+                    <div class="ui top attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <h3 class="ui teal header">博客</h3>
+                            </div>
+                            <div class="right aligned column">
+                                共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${pageInfo.total}"> 14 </h2> 篇
+                            </div>
+                        </div>
+                    </div>
+                    <!--中间内容上面的导航结束 ---->
+
+                    <!-- 中间内容中间的具体的博客信息开始 -->
+                    <div class="ui attached teal segment">
+                        <div class="ui padded vertical segment m-padded-big" th:each="blog : ${pageInfo.list}">
+                            <div class="ui middle aligned mobile reversed stackable grid">
+                                <div class="eleven wide column">
+                                    <h3 class="ui header"><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">JVM内存模型</a></h3>
+                                    <p class="m-text" th:text="|${blog.description}......|" >&nbsp;&nbsp;&nbsp;最近学习了一下JVM的内存模型，本来想自己写一篇学习心得，总是觉得自己表达不清，然后就从学习资料里复制一段，写到最后发现，基本都是复制的写到最后发现，基本都是复制的</p>
+                                    <div class="ui stackable grid">
+                                        <div class="eleven wide column">
+                                            <div class="ui mini horizontal link list">
+                                                <div class="item">
+                                                    <img src="../static/images/me.jpg" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image"/>
+                                                    <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">曾超</a></div>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="calendar icon"></i> <span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2020-3-02</span>
+                                                </div>
+                                                <div class="item">
+                                                    <i class="eye icon"></i>  <span th:text="${blog.views}">2342</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right aligned five wide column">
+                                            <a href="#" th:href="@{/types/{id}(id=${blog.type.id})}" target="_blank" class="ui teal basic m-padded-all-mini m-text-thin label" th:text="${blog.type.name}">学习笔记</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="five wide column">
+                                    <a href="#" target="_blank" th:href="@{/blog/{id}(id=${blog.id})}">
+                                        <img src="../static/images/test1.jpg" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded m-image-size-square image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <!-- 中间内容中间的具体的博客信息结束 -->
+
+                    <!-- 中间内容底部的翻页效果开始 --->
+                    <div class="ui bottom attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <div class="item"><a class="ui mini blue basic button" th:href="@{/(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a></div>
+                            </div>
+                            <div class="right aligned column">
+                                <div class="item"><a class="ui mini blue basic button" th:href="@{/(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui segment m-inline-block">
+                        <p >当前第<span th:text="${pageInfo.pageNum}"></span>页，总<span th:text="${pageInfo.pages}"></span>页，共<span th:text="${pageInfo.total}"></span>条记录</p>
+                    </div>
+                    <!-- 中间内容底部的翻页效果结束 --->
+
+                </div>
+                <!--中间内容左边结束--------->
+
+                <!--中间内容右边开始--------->
+                <div class="five wide column">
+                    <!-- 中间内容右边分类模块开始 -->
+                    <div class="ui segments">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="idea icon"></i>分类
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" target="_blank" th:href="@{types/-1}">MORE <i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui teal segment">
+                            <div class="ui fluid vertical menu">
+                                <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item" th:each="type : ${types}" >
+                                    <span th:text="${type.name}">学习日志</span>
+                                    <div class="ui teal basic left pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
+                                </a>
+                                <!-- 静态查看-->
+                                <!--/*-->
+                                <a href="#" class="item">
+                                    生活日常<div class="ui teal basic left pointing label">13</div>
+                                </a>
+                                <!--*/-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 中间内容右边分类模块结束 -->
+
+                    <!-- 中间内容右边标签模块开始 -->
+                    <div class="ui segment m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="tags icon"></i>标签
+                                </div>
+                                <div class="right aligned column">
+                                    <a href="#" th:href="@{tags/-1}" target="_blank">MORE <i class="angle double right icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui teal segment">
+                            <a href="#" th:href="@{/tags/{id}(id=${tag.id})}" target="_blank" th:each="tag : ${tags}"  class="ui teal basic left pointing label m-margin-tb-tiny" >
+                                <span th:text="${tag.name}">方法论</span> <div class="detail" th:text="${#arrays.length(tag.blogs)}">23</div>
+                            </a>
+                            <!-- 静态查看-->
+                            <!--/*-->
+                            <a href="#" target="_blank" class="ui teal basic left pointing label m-margin-small">
+                                java <div class="detail">2</div>
+                            </a>
+                            <!--*/-->
+                        </div>
+                    </div>
+                    <!-- 中间内容右边标签模块结束 -->
+
+                    <!-- 中间内容右边最新推荐模块开始 -->
+                    <div class="ui segments m-margin-top-large">
+                        <div class="ui secondary segment">
+                            <div class="ui two column grid">
+                                <div class="column">
+                                    <i class="bookmark icon"></i>最新推荐
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui teal segment">
+                            <div class="ui fluid vertical menu" th:each="recommendBlog : ${recommendBlogs}">
+                                <a href="#" th:href="@{/blog/{id}(id=${recommendBlog.id})}" th:text="${recommendBlog.title}" target="_blank" class="item m-text-thin">java内存模型</a>
+                                <!-- 静态查看-->
+                                <!--/*-->
+                                <a href="#" target="_blank" class="item m-text-thin">数据库原理</a>
+                                <!--*/-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 中间内容右边最新推荐模块结束 -->
+
+                    <!-- 中间内容右边二维码模块开始 -->
+                    <h4 class="ui horizontal divider header">扫码关注我</h4>
+                    <div class="ui centered card" style="width: 11em">
+                        <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="rounded image"  style="width: 11em"/>
+                    </div>
+                    <!-- 中间内容右边二维码模块结束 -->
+
+                </div>
+                <!--中间内容右边结束--------->
+
+            </div>
+        </div>
+    </div>
+    <!--中间内容结束------------------------------------------>
+
+    <!--底部内容开始-->
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" class="ui rounded image" alt="" style="width: 110px"/>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a class="item" href="#">testXXXXXXXXX</a>
+                        <a class="item" href="#">testXXXXXXXXX</a>
+                        <a class="item" href="#">testXXXXXXXXX</a>
+                        <a class="item" href="#">testXXXXXXXXX</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+                    <div class="ui inverted link list">
+                        <a class="item" href="#">Email: 852028438@qq.com</a>
+                        <a class="item" href="#">QQ: 852028438</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">介绍</h4>
+                    <p class="m-text-thin m-text-spaced m-opacity-mini">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                        XXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+                </div>
+
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright 2020 - 2021 Wuhan</p>
+        </div>
+    </footer>
+    <!--底部内容结束------------------------------------------>
+
+<th:block th:replace="_fragments :: script">
+<script src="../static/dist/jquery/jquery-3.4.1.min.js" ></script>
+<script src="../static/dist/semantic/semantic.min.js" ></script>
+</th:block>
+<script>
+    $('.m-menu.m-toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 300,
+            "height": 400,
+            "position": "right",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
+</body>
+</html>
