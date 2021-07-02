@@ -12,6 +12,7 @@ import cn.sinap.zengblog.service.TypeService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -78,6 +79,11 @@ public class IndexController {
         model.addAttribute("pageInfo",pageInfo);
         model.addAttribute("query",query);
         return "search";
+    }
+
+    @GetMapping("/game")
+    public String toGame(){
+        return "game";
     }
 
 
